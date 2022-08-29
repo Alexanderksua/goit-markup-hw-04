@@ -1,0 +1,534 @@
+html {
+      box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+      box-sizing: inherit;
+}
+
+/* Глобальный сброс Внешних\Внутренних Отступов 
+      Заголовков, Абзацев и Ненумерованных Списков */
+h1,
+h2,
+h3,
+p,
+ul {
+      padding: 0;
+      margin: 0;
+}
+
+:root {
+      /* Colors */
+      --black: #000000;
+      --dark-gray: #212121;
+      --gray: #2f303a;
+      --light-gray: #757575;
+      --blue: #2196f3;
+      --blue-btn-active: #188CE8;
+      --light-white: #ffffff;
+      --white-card-p: #eeeeee;
+      --white-br-bottom: #ececec;
+      --white-60: rgba(255, 255, 255, 0.6);
+      --white-bkgr: #f5f5f5;
+      --ligth-gray-bkgr-team: #F5F4FA;
+}
+
+
+/* BODY */
+body {
+      color: var(--dark-gray);
+      font-family: 'Roboto', 'Sans Serif';
+}
+
+
+
+.padd-top-botm {
+      padding-top: 94px;
+      padding-bottom: 94px;
+}
+
+/*
+«B7» Создан общий вспомогательный класс .container для центрирования и ограничения контента по ширине.
+«B8» Ширина «контейнера» соответствует макету и равна 1200px. 
+«B9» «Контейнер» оборачивает контент хедера, футера и секций. То есть находится внутри них.
+*/
+.container {
+      width: 1200px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      /* outline: 1px dashed red; */
+}
+
+/* Отключаем настройки оформления списков по умолчанию*/
+.list {
+      list-style-type: none;
+}
+
+/* Отключаем настройки ссылок по умолчанию*/
+.list a,
+.header-logo,
+.footer-logo {
+      text-decoration: none;
+}
+
+.address {
+      font-style: normal;
+}
+
+/* HEADER */
+.header {
+      background-color: var(--light-white);
+      border-bottom: 1px solid var(--white-br-bottom);
+}
+
+/* Центрирование элементов группы Героя (Заголовка и Кнопки) */
+.header-group {
+      display: block;
+      align-items: center;
+      padding-top: 24px;
+      padding-bottom: 25px;
+}
+
+/* Назначение типа элемента строчно-блочным */
+
+/* Внешний Отступ */
+.header-logo {
+      margin-right: 93px;
+
+}
+
+/* Внешний Отступ */
+
+.list.header-contacts {
+      margin-left: auto;
+}
+
+/* Автоматический внешний отступ справа для всех элементов списка*/
+.list.pages>.pages-item:nth-child(n) {
+      margin-right: 50px;
+}
+
+/* Отмена Автоматического внешнего отступа справа в последнем элементе списка*/
+.list.pages>.pages-item:last-child {
+      margin-right: 0;
+}
+
+/* Автоматический внешний отступ справа для всех элементов списка*/
+.list.header-contacts>.header-contacts-item:nth-child(n) {
+      margin-right: 50px;
+}
+
+/* Отмена Автоматического внешнего отступа справа в последнем элементе списка*/
+.list.header-contacts>.header-contacts-item:last-child {
+      margin-right: 0;
+}
+
+
+/* Элементы в ряд */
+.header-group,
+.list.pages,
+.list.header-contacts,
+.list.qualites-list,
+.list.features-list,
+.list.team-list,
+.list.cards,
+.list.buttons {
+      display: flex;
+}
+
+
+.header-logo,
+.footer-logo {
+      font-family: 'Raleway';
+      font-weight: 700;
+      font-size: 26px;
+      line-height: calc(31 / 26);
+      letter-spacing: 0.03em;
+      color: var(--black);
+}
+
+.blue-web {
+      color: var(--blue);
+}
+
+.header-group {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+      letter-spacing: 0.02em;
+}
+
+.nav-group a {
+      color: var(--dark-gray);
+}
+
+.header-contacts a {
+      color: var(--light-gray);
+}
+
+.hover-focus-i:hover,
+.hover-focus-i:focus {
+      color: var(--blue);
+}
+
+/* FOOTER */
+.footer {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      background-color: var(--gray);
+}
+
+.footer-logo {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--light-white);
+}
+
+
+.contacts-item-mailto,
+.contacts-item-tel,
+.contacts-item-coord {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      letter-spacing: 0.03em;
+      color: var(--white-60);
+}
+
+.contacts-item-coord {
+      color: var(--light-white);
+}
+
+.pages-item-link.curent {
+      color: var(--blue);
+}
+
+/* Внутрений Отступ снизу между элементами списка Адрес*/
+.list.contacts>li:not(:last-child) {
+      margin-bottom: 9px;
+}
+
+
+/* INDEX */
+/* Единая стилизация Заголовков Секций */
+.title-style {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 50px;
+}
+
+/* Центрирование по горизонтали элементов раздела "ГЕРОЙ" */
+.hero {
+      background-color: var(--gray);
+      text-align: center;
+      padding-top: 200px;
+      padding-bottom: 200px;
+}
+
+/* Стилизация Заголовка раздела "ГЕРОЙ" */
+.hero-title {
+      width: 696px;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: calc(60 / 44);
+
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--light-white);
+
+      margin: 0 auto 30px;
+
+}
+
+/* Стилизация Кнопки раздела "ГЕРОЙ" */
+.btn-hero {
+      background-color: var(--blue);
+
+      border-width: 0;
+      border-radius: 4px;
+
+      padding: 10px 32px;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: calc(30 /16);
+      letter-spacing: 0.06em;
+      color: var(--light-white);
+
+      cursor: pointer;
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+      background-color: var(--blue-btn-active);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Качества Студии */
+.qualites {
+      justify-content: center;
+}
+
+
+.container.qualites-list>.qualites-list-item {
+      width: calc((100% - (3 * 30px)) / 4);
+}
+.container .list.qualites-list {
+      justify-content: space-between;
+}
+/* .qualites-list>.qualites-list-item:not(:last-child) {
+      margin-right: 30px;
+} */
+
+.qualites-list-item-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+}
+
+.qualites-list-item-text {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      letter-spacing: 0.03em;
+      color: var(--light-gray);
+}
+
+/* Виды деятельности Студии */
+
+/* Автоматический внешний отступ справа для всех элементов списка*/
+.container .features-list{
+      justify-content: space-between ;
+}
+/* .features-list>.features-list-item:nth-child(n) {
+      margin-right: 30px;
+} */
+
+/* Отмена Автоматического внешнего отступа справа в последнем элементе списка*/
+.features-list>.features-list-item:last-child {
+      margin-right: 0;
+}
+
+.features {
+      padding-top: 0;
+      padding-bottom: 94px;
+}
+
+/* Команда */
+
+/* Стилизация Заголовка раздела "Наша Команда" */
+.team {
+      background-color: var(--ligth-gray-bkgr-team);
+}
+
+/* Оступы между текстом карточки и сторонами */
+.team-card-text {
+      padding-top: 30px;
+      padding-bottom: 30px;
+}
+
+/* Стилизация "карточки члена команды" раздела "Наша Команда" */
+.team-list-item {
+      
+      width: calc((100% - (3 * 30px)) / 4);
+      background: var(--light-white);
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+
+}
+
+
+/* Стилизация Заголовка карточки */
+.team-list-item-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: calc(19 / 16);
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 10px;
+}
+
+/* Стилизация текста карточки */
+.team-list-item-text {
+      font-size: 16px;
+      line-height: calc(19 / 16);
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: var(--light-gray);
+
+}
+
+/* Автоматический внешний отступ справа для всех элементов списка*/
+.container .team-list{
+      justify-content: space-between;
+}
+/* .team-list>.team-list-item:nth-child(n) {
+      margin-right: 30px;
+} */
+
+/* Отмена Автоматического внешнего отступа справа в последнем элементе списка*/
+.team-list>.team-list-item:last-child {
+      margin-right: 0;
+}
+
+/* PORTFOLIO */
+.visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: 0;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+}
+
+/* BUTTONS */
+/* Стилизация кнопок Фильтра (без неведения курсора) */
+.btn {
+      padding: 6px 22px;
+      border-width: 0px;
+      border-radius: 4px;
+
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: calc(26 / 16);
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: var(--dark-gray);
+
+      cursor: pointer;
+}
+
+/* Положение Кнопок в Центре Контейнера и Внешний отступ сверху от Хедера*/
+.list.buttons {
+      justify-content: center;
+      margin-bottom: 50px;
+}
+
+/* Отступы между кнопок */
+.buttons-item:not(:last-child) {
+      margin-right: 8px;
+}
+
+/* Изменение цвета кнопки и текста при наведение курсора */
+.hover-focus-p:hover,
+.hover-focus-p:focus {
+      background-color: var(--blue);
+      color: var(--light-white);
+}
+
+
+
+/* CARDS */
+
+
+
+/* Автоматический размещение всех элементов списка */
+.list.cards {
+      /* width: 1200px; */
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.list.cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+}
+
+/* Размер карточки */
+.container.cards > .cards-item {
+      width: calc((100% - (2 * 30px)) / 3);
+      background: var(--light-white);
+
+}
+
+/* Внешний Отступ снизу от карточки до Футера */
+
+/* Стилизация Заголовка Карточки */
+.cards-item-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: calc(36 / 18);
+      letter-spacing: 0.06em;
+      color: var(--dark-gray);
+
+}
+
+/* Стилизация Текста Карточки */
+.cards-item-text {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+      letter-spacing: 0.03em;
+      color: var(--light-gray);
+
+}
+
+/* Внутренний Отступ от края карточки её Заголовка и Текста */
+.card-text-content {
+      padding: 20px 24px;
+      border-left: 1px solid var(--white-card-p);
+      border-right: 1px solid var(--white-card-p);
+      border-bottom: 1px solid var(--white-card-p);
+}
+
+/* Отступ вертикальный между Заголовком и Текстом в карточке */
+.cards-item h2 {
+      margin-bottom: 4px;
+}
+
+/* 
+Проект 
+++«A1» В корне проекта есть папка images с изображениями. 
+++«A2» В корне проекта есть папка css с файлами стилей. 
+++«A3» Все стили написаны в одном файле styles.css,который находится в папке css. 
+++«A4» В названиях файлов нет заглавных букв,пробелов и транслита,
+только буквы и слова английского языка. 
+++«A5» Исходный код отформатирован при помощи Prettier. 
+++«A6» Все изображения и текстовый контент взяты из макета. 
+++«A7» На всех HTML-страницах подключен нормализатор стилей modern-normalize. 
+++«A7» Код написан следуя руководству. 
+
+Оформление 
+++«B1» Допускается глобальный сброс стилей по селектору тега для элементов <h1>...<h6>,
+ <p>и <ul>. 
+++«B2» У элементов нет внешних отступов (свойство margin) «пробивающих» родительский 
+элемент. 
+++«B3» В однострочных коллекциях элементов очищен крайний левый или правый margin 
+элементов (если он есть). 
+++«B4» Для отступов между двумя соседними элементами используется свойство margin. 
+++«B5» Для зазора между границей родителя и его ребёнком используется свойство padding. 
+++«B6» Размеры внешних отступов (свойство margin) и внутренних полей (свойство padding) 
+элементов заданы точно по макету. 
+++«B7» Создан общий вспомогательный класс .container для центрирования и ограничения 
+контента по ширине. 
+++«B8» Ширина «контейнера» соответствует макету и равна 1200px. 
+++«B9» «Контейнер» оборачивает контент хедера, футера и секций. То есть находится 
+внутри них. 
+++«B10» Для расположения элементов используется Flexbox, но только там,где это необходимо. 
+Например в шапке, навигации,списках в секциях и так далее,то есть там,где расположить 
+элементы горизонтально по другому невозможно. 
+++«B11» Финальные размеры блоков в браузере соответствуют макету. 
+++«B12» У элементов нет фиксированной высоты,она определяется их контентом. 
+++«B13» У хедера есть нижняя рамка,необходимо сильно приблизить макет чтобы увидеть её. 
+++«B14» Секции расположены друг под другом как стопка книг, без внешних отступов. 
+++«B15» Для всех секций используется один класс .section,
+заданы верхние и нижние падинги по 94px,отодвигающие контент внутрь секции. 
+++«B16» Для построения сеток используется техника описанная в конспекте и видео-мастерской. 
+++«B17» В карточках на странице Портфолио есть рамка (свойство border),
+но только в нижней части карточки.
+*/
