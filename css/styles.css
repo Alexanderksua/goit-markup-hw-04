@@ -19,6 +19,13 @@ ul {
       margin: 0;
 }
 
+/* Все списки без меток */
+.list {
+      list-style-type: none;
+}
+
+
+
 :root {
       /* Colors */
       --black: #000000;
@@ -33,39 +40,15 @@ ul {
       --white-60: rgba(255, 255, 255, 0.6);
       --white-bkgr: #f5f5f5;
       --ligth-gray-bkgr-team: #F5F4FA;
+      --hero-bg: #C4C4C4;
+      --hero-bg-overlay: rgba(47, 48, 58, 0.4);
 }
 
 
-/* BODY */
 body {
+      background-color: var(--ligth-gray-bkgr-team);
       color: var(--dark-gray);
       font-family: 'Roboto', 'Sans Serif';
-}
-
-
-
-.padd-top-botm {
-      padding-top: 94px;
-      padding-bottom: 94px;
-}
-
-/*
-«B7» Создан общий вспомогательный класс .container для центрирования и ограничения контента по ширине.
-«B8» Ширина «контейнера» соответствует макету и равна 1200px. 
-«B9» «Контейнер» оборачивает контент хедера, футера и секций. То есть находится внутри них.
-*/
-.container {
-      width: 1200px;
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-left: auto;
-      margin-right: auto;
-      /* outline: 1px dashed red; */
-}
-
-/* Отключаем настройки оформления списков по умолчанию*/
-.list {
-      list-style-type: none;
 }
 
 /* Отключаем настройки ссылок по умолчанию*/
@@ -73,315 +56,19 @@ body {
 .header-logo,
 .footer-logo {
       text-decoration: none;
-}
-
-.address {
+      color: inherit;
+      text-transform: none;
       font-style: normal;
 }
 
-/* HEADER */
-.header {
-      background-color: var(--light-white);
-      border-bottom: 1px solid var(--white-br-bottom);
-}
-
-/* Центрирование элементов группы Героя (Заголовка и Кнопки) */
-.header-group {
-      display: block;
-      align-items: center;
-      padding-top: 24px;
-      padding-bottom: 25px;
-}
-
-/* Назначение типа элемента строчно-блочным */
-
-/* Внешний Отступ */
-.header-logo {
-      margin-right: 93px;
-
-}
-
-/* Внешний Отступ */
-
-.list.header-contacts {
+.container {
+      width: 1200px;
+      padding-left: 15px;
+      padding-right: 15px;
       margin-left: auto;
+      margin-right: auto;
 }
 
-/* Автоматический внешний отступ справа для всех элементов списка*/
-.list.pages>.pages-item:nth-child(n) {
-      margin-right: 50px;
-}
-
-/* Отмена Автоматического внешнего отступа справа в последнем элементе списка*/
-.list.pages>.pages-item:last-child {
-      margin-right: 0;
-}
-
-/* Автоматический внешний отступ справа для всех элементов списка*/
-.list.header-contacts>.header-contacts-item:nth-child(n) {
-      margin-right: 50px;
-}
-
-/* Отмена Автоматического внешнего отступа справа в последнем элементе списка*/
-.list.header-contacts>.header-contacts-item:last-child {
-      margin-right: 0;
-}
-
-
-/* Элементы в ряд */
-.header-group,
-.list.pages,
-.list.header-contacts,
-.list.qualites-list,
-.list.features-list,
-.list.team-list,
-.list.cards,
-.list.buttons {
-      display: flex;
-}
-
-
-.header-logo,
-.footer-logo {
-      font-family: 'Raleway';
-      font-weight: 700;
-      font-size: 26px;
-      line-height: calc(31 / 26);
-      letter-spacing: 0.03em;
-      color: var(--black);
-}
-
-.blue-web {
-      color: var(--blue);
-}
-
-.header-group {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: calc(16 / 14);
-      letter-spacing: 0.02em;
-}
-
-.nav-group a {
-      color: var(--dark-gray);
-}
-
-.header-contacts a {
-      color: var(--light-gray);
-}
-
-.hover-focus-i:hover,
-.hover-focus-i:focus {
-      color: var(--blue);
-}
-
-/* FOOTER */
-.footer {
-      padding-top: 60px;
-      padding-bottom: 60px;
-      background-color: var(--gray);
-}
-
-.footer-logo {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: var(--light-white);
-}
-
-
-.contacts-item-mailto,
-.contacts-item-tel,
-.contacts-item-coord {
-      font-size: 14px;
-      line-height: calc(24 / 14);
-      letter-spacing: 0.03em;
-      color: var(--white-60);
-}
-
-.contacts-item-coord {
-      color: var(--light-white);
-}
-
-.pages-item-link.curent {
-      color: var(--blue);
-}
-
-/* Внутрений Отступ снизу между элементами списка Адрес*/
-.list.contacts>li:not(:last-child) {
-      margin-bottom: 9px;
-}
-
-
-/* INDEX */
-/* Единая стилизация Заголовков Секций */
-.title-style {
-      font-weight: 700;
-      font-size: 36px;
-      line-height: calc(42 / 36);
-      text-align: center;
-      letter-spacing: 0.03em;
-      margin-bottom: 50px;
-}
-
-/* Центрирование по горизонтали элементов раздела "ГЕРОЙ" */
-.hero {
-      background-color: var(--gray);
-      text-align: center;
-      padding-top: 200px;
-      padding-bottom: 200px;
-}
-
-/* Стилизация Заголовка раздела "ГЕРОЙ" */
-.hero-title {
-      width: 696px;
-      font-weight: 900;
-      font-size: 44px;
-      line-height: calc(60 / 44);
-
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--light-white);
-
-      margin: 0 auto 30px;
-
-}
-
-/* Стилизация Кнопки раздела "ГЕРОЙ" */
-.btn-hero {
-      background-color: var(--blue);
-
-      border-width: 0;
-      border-radius: 4px;
-
-      padding: 10px 32px;
-
-      font-weight: 700;
-      font-size: 16px;
-      line-height: calc(30 /16);
-      letter-spacing: 0.06em;
-      color: var(--light-white);
-
-      cursor: pointer;
-}
-
-.btn-hero:hover,
-.btn-hero:focus {
-      background-color: var(--blue-btn-active);
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-/* Качества Студии */
-.qualites {
-      justify-content: center;
-}
-
-
-.container.qualites-list>.qualites-list-item {
-      width: calc((100% - (3 * 30px)) / 4);
-}
-.container .list.qualites-list {
-      justify-content: space-between;
-}
-/* .qualites-list>.qualites-list-item:not(:last-child) {
-      margin-right: 30px;
-} */
-
-.qualites-list-item-title {
-      font-weight: 700;
-      font-size: 14px;
-      line-height: calc(16 / 14);
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-}
-
-.qualites-list-item-text {
-      font-size: 14px;
-      line-height: calc(24 / 14);
-      letter-spacing: 0.03em;
-      color: var(--light-gray);
-}
-
-/* Виды деятельности Студии */
-
-/* Автоматический внешний отступ справа для всех элементов списка*/
-.container .features-list{
-      justify-content: space-between ;
-}
-/* .features-list>.features-list-item:nth-child(n) {
-      margin-right: 30px;
-} */
-
-/* Отмена Автоматического внешнего отступа справа в последнем элементе списка*/
-.features-list>.features-list-item:last-child {
-      margin-right: 0;
-}
-
-.features {
-      padding-top: 0;
-      padding-bottom: 94px;
-}
-
-/* Команда */
-
-/* Стилизация Заголовка раздела "Наша Команда" */
-.team {
-      background-color: var(--ligth-gray-bkgr-team);
-}
-
-/* Оступы между текстом карточки и сторонами */
-.team-card-text {
-      padding-top: 30px;
-      padding-bottom: 30px;
-}
-
-/* Стилизация "карточки члена команды" раздела "Наша Команда" */
-.team-list-item {
-      
-      width: calc((100% - (3 * 30px)) / 4);
-      background: var(--light-white);
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-            0px 1px 1px rgba(0, 0, 0, 0.14),
-            0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 0px 0px 4px 4px;
-
-}
-
-
-/* Стилизация Заголовка карточки */
-.team-list-item-title {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: calc(19 / 16);
-      text-align: center;
-      letter-spacing: 0.03em;
-      margin-bottom: 10px;
-}
-
-/* Стилизация текста карточки */
-.team-list-item-text {
-      font-size: 16px;
-      line-height: calc(19 / 16);
-      text-align: center;
-      letter-spacing: 0.03em;
-      color: var(--light-gray);
-
-}
-
-/* Автоматический внешний отступ справа для всех элементов списка*/
-.container .team-list{
-      justify-content: space-between;
-}
-/* .team-list>.team-list-item:nth-child(n) {
-      margin-right: 30px;
-} */
-
-/* Отмена Автоматического внешнего отступа справа в последнем элементе списка*/
-.team-list>.team-list-item:last-child {
-      margin-right: 0;
-}
-
-/* PORTFOLIO */
 .visually-hidden {
       position: absolute;
       width: 1px;
@@ -395,108 +82,345 @@ body {
       overflow: hidden;
 }
 
-/* BUTTONS */
-/* Стилизация кнопок Фильтра (без неведения курсора) */
-.btn {
-      padding: 6px 22px;
-      border-width: 0px;
-      border-radius: 4px;
+/* HEADER */
+.header {
+      background-color: var(--light-white);
+      border-bottom: 1px solid var(--white-br-bottom);
+}
 
-      font-family: inherit;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: calc(26 / 16);
-      text-align: center;
+.header-group,
+.header-group .contacts,
+.pages {
+      display: flex;
+      align-items: center;
+}
+
+.header-logo,
+.footer-logo {
+      display: block;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      font-family: 'Raleway';
+
+      font-weight: 700;
+      font-size: 26px;
+      line-height: calc(31/26);
+
       letter-spacing: 0.03em;
+}
+
+.header-logo {
+      color: var(--black);
+      margin-right: 93px;
+}
+
+.header-group {
+      display: flex;
+      justify-content: space-between;
+}
+
+.blue-web {
+      color: var(--blue);
+}
+
+
+.header-group>ul,
+.nav-group {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: calc(16/14);
+      letter-spacing: 0.02em;
+      color: var(--light-gray);
+}
+
+.nav-group {
       color: var(--dark-gray);
-
-      cursor: pointer;
+      margin-right: auto;
 }
 
-/* Положение Кнопок в Центре Контейнера и Внешний отступ сверху от Хедера*/
-.list.buttons {
-      justify-content: center;
-      margin-bottom: 50px;
+.pages-item:not(:last-child),
+.contacts-item:not(:last-child) {
+      margin-right: 50px;
 }
 
-/* Отступы между кнопок */
-.buttons-item:not(:last-child) {
-      margin-right: 8px;
+ul>li>.link:hover,
+ul>li>.link:focus,
+.curent {
+      color: var(--blue);
 }
 
-/* Изменение цвета кнопки и текста при наведение курсора */
-.hover-focus-p:hover,
-.hover-focus-p:focus {
-      background-color: var(--blue);
+
+/* STUDIO main */
+/* HERO */
+.hero {
+      background: rgb(47, 48, 58);
+      background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%);
+      background-image: url(/images/bg-Img.png);
+      background-repeat: no-repeat;
+      background-position: center;
+}
+
+.hero-group {
+      padding: 200px 0;
+      text-align: center;
+}
+
+.hero-title {
+      width: 696px;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: calc(60/44);
+
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       color: var(--light-white);
-}
-
-
-
-/* CARDS */
-
-
-
-/* Автоматический размещение всех элементов списка */
-.list.cards {
-      /* width: 1200px; */
+      margin-bottom: 30px;
       margin-left: auto;
       margin-right: auto;
 }
 
-.list.cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-}
-
-/* Размер карточки */
-.container.cards > .cards-item {
-      width: calc((100% - (2 * 30px)) / 3);
-      background: var(--light-white);
-
-}
-
-/* Внешний Отступ снизу от карточки до Футера */
-
-/* Стилизация Заголовка Карточки */
-.cards-item-title {
+.btn-hero {
       font-weight: 700;
-      font-size: 18px;
-      line-height: calc(36 / 18);
-      letter-spacing: 0.06em;
-      color: var(--dark-gray);
-
-}
-
-/* Стилизация Текста Карточки */
-.cards-item-text {
       font-size: 16px;
-      line-height: calc(30 / 16);
+      line-height: calc(30/16);
+
+      letter-spacing: 0.06em;
+      color: var(--light-white);
+      background-color: var(--blue);
+
+      border: none;
+      border-radius: 4px;
+      padding: 10px 32px;
+      cursor: pointer;
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+      background: var(--blue-btn-active);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+
+}
+
+/* QUALITES */
+.qualites {
+      padding-top: 94px;
+      padding-bottom: 94px;
+      background: var(--white-bkgr);
+}
+
+.container .qualites-list>.qualites-item {
+      width: calc(100% - ((3 * 30px) / 4));
+      height: 120px;
+}
+
+.qualites-list {
+      display: flex;
+      justify-content: center;
+}
+
+.qualites-list>.item:not(:last-child),
+.features-list>.item:not(:last-child),
+.team-list>.item:not(:last-child) {
+      margin-right: 30px;
+}
+
+.qualites-list h3 {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: calc(16/14);
       letter-spacing: 0.03em;
+      text-transform: uppercase;
+
+      color: var(--dark-gray);
+      margin-bottom: 10px;
+}
+
+.qualites-list p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: calc(24/14);
+      letter-spacing: 0.03em;
+
       color: var(--light-gray);
+}
+
+/* FEATURES */
+.features {
+      padding-bottom: 94px;
+}
+
+.container>.features-list>.features-item {
+      width: calc(100% - ((2*30px)/3));
+}
+
+.features-list img,
+.team-list img {
+      display: block;
+}
+
+.features-list {
+      display: flex;
+      justify-content: center;
+      background: var(--white-bkgr);
+}
+
+.features-title,
+.team-title,
+.clients-title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: calc(42/36);
+      text-align: center;
+      letter-spacing: 0.03em;
+
+      color: var(--dark-gray);
+      margin-bottom: 50px;
+}
+
+
+
+/* TEAM */
+.team {
+      background-color: var(--ligth-gray-bkgr-team);
+      padding-top: 94px;
+      padding-bottom: 94px;
+}
+
+.team-list {
+      display: flex;
+      justify-content: center;
+}
+
+.team-card-text {
+      padding-top: 30px;
+      padding-bottom: 30px;
+}
+
+.team-list .team-item {
+      background: var(--light-white);
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
 
 }
 
-/* Внутренний Отступ от края карточки её Заголовка и Текста */
-.card-text-content {
-      padding: 20px 24px;
-      border-left: 1px solid var(--white-card-p);
-      border-right: 1px solid var(--white-card-p);
-      border-bottom: 1px solid var(--white-card-p);
+.team-list h3 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: calc(19 / 16);
+      text-align: center;
+      letter-spacing: 0.03em;
+
+      color: var(--dark-gray);
+      margin-bottom: 10px;
 }
 
-/* Отступ вертикальный между Заголовком и Текстом в карточке */
-.cards-item h2 {
-      margin-bottom: 4px;
+.team-list p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: calc(19 / 16);
+      text-align: center;
+      letter-spacing: 0.03em;
+
+      color: var(--light-gray);
+      margin-bottom: 16px;
 }
+
+/* clients */
+.clients {
+      border-color: var(--white-bkgr);
+      padding-top: 94px;
+      padding-bottom: 94px;
+}
+
+.clients-list>.item {
+      display: inline-block;
+}
+
+/* PORTFOLIO main */
+/* FILTERS BUTTONSET /*
+/* WORKS */
+
+/* FOOTER */
+.footer {
+      display: flex;
+      background: rgb(47, 48, 58);
+      background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%);
+      margin: 0;
+      padding-top: 60px;
+      padding-bottom: 60px;
+}
+
+.footer-group {
+      display: flex;
+}
+
+.footer-logo {
+      display: block;
+      padding: 0;
+      margin-bottom: 20px;
+      color: var(--light-white);
+}
+
+/* ADDRESS */
+.address {
+      padding: 0;
+      margin: 0;
+      margin-right: 70px;
+}
+
+.contacts-item .contacts-item-coord,
+.contacts-item .contacts-item-mailto,
+.contacts-item .contacts-item-tel {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: calc(24/14);
+      letter-spacing: 0.03em;
+
+      color: var(--light-white);
+}
+
+.contacts-item .contacts-item-mailto,
+.contacts-item .contacts-item-tel {
+      color: var(--white-60);
+}
+
+.address .list .item:not(:last-child) {
+      margin-bottom: 9px;
+}
+
+/* SOCIALS*/
+.social {
+      display: block;
+      padding-top: 12px;
+}
+
+.social-list {
+      display: flex;
+      border: 1px dashed magenta;
+}
+
+.social-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: calc(16/14);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--light-white);
+      margin-bottom: 20px;
+
+}
+
+
 
 /* 
 Проект 
 ++«A1» В корне проекта есть папка images с изображениями. 
---«A2» Все векторные изображения (иконки) собраны в SVG-спрайт icons.svg,
+++«A2» Все векторные изображения (иконки) собраны в SVG-спрайт icons.svg,
   который лежит в папке images. 
---«A3» Все векторные изображения оптимизированы. 
+++«A3» Все векторные изображения оптимизированы. 
 ++«A4» В корне проекта есть папка css с файлами стилей. 
 ++«A5» Все стили написаны в одном файле styles.css, который находится в папке css. 
 ++«A6» В названиях файлов нет заглавных букв, пробелов и транслита,
@@ -507,13 +431,12 @@ body {
 ++«A10» Код написан следуя руководству. 
 
 Разметка 
---«B1» Для всех иконок используется векторная графика в формате svg. 
---«B2» SVG-иконки экспортированы правильно. При экспорте выбрана «группа»,
+++«B1» Для всех иконок используется векторная графика в формате svg. 
+++«B2» SVG-иконки экспортированы правильно. При экспорте выбрана «группа»,
   а не сам вектор. 
 --«B3» Все иконки из SVG-спрайта добавлены в HTML при помощи тегов <svg>и <use>
 --«B4» Размеры иконок взяты из макета и заданы элементу <svg>в HTML-файле. 
---«B5» В блоке Контактов в шапке,
-  добавлены иконки конверта и телефона. 
+--«B5» В блоке Контактов в шапке, добавлены иконки конверта и телефона. 
 --«B6» В секции Преимуществ добавлены иконки. 
 --«B7» В секции Команды добавлены иконки соцсетей. 
 --«B8» В секции Клиентов добавлены иконки компаний. 
@@ -521,7 +444,7 @@ body {
 
 Оформление 
 --«C1» Большое изображение с эффектом затемнения (под хедером) выполнено как фон. 
-  Для затемнения используется многослойный фон с градиентом. 
+--Для затемнения используется многослойный фон с градиентом. 
 --«C2» Фоновое изображение в блоке под хедером не растягивается шире своего 
   оригинального размера 1600рх. 
 --«C3» В карточках секции Наша команда есть постоянный эффект тени. 

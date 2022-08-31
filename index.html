@@ -20,12 +20,11 @@
 </head>
 
 <body>
-
-
   <!-- Голова-Шапка сайты -->
   <header class="header">
     <div class="container">
       <!-- Блок оформления фона header -->
+
       <div class="header-group">
         <!-- Панель навигации из двух частей -->
         <!-- Панель навигации #1 - Логотип, Студія, Портфоліо -->
@@ -34,26 +33,27 @@
         <nav class="nav-group">
           <!-- Список ссылок на страницы -->
           <ul class="list pages">
-            <li class="pages-item">
-              <a class="pages-item-link hover-focus-i curent" href="./index.html">Студія</a>
+            <li class="item pages-item curent">
+              <a class="link curent" href="./index.html">Студія</a>
             </li>
-            <li class="pages-item">
-              <a class="pages-item-link hover-focus-i" href="./portfolio.html">Портфоліо</a>
+            <li class="item pages-item">
+              <a class="link" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="pages-item">
-              <a class="pages-item-link hover-focus-i" href="./contacts.html">Контакти</a>
+            <li class="item pages-item">
+              <a class="link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
         </nav>
 
         <!-- Панель навигации #2 - Контакти: e-mail, tel -->
-        <ul class="list header-contacts">
-          <li class="header-contacts-item">
-            <a class="header-contacts-link hover-focus-i"
-              href="mailto:alexanderksua@gmail.com">alexanderksua@gmail.com</a>
+        <ul class="list contacts">
+          <li class="item contacts-item">
+            <a class="link" href="mailto:alexanderksua@gmail.com">
+              alexanderksua@gmail.com</a>
           </li>
-          <li class="header-contacts-item">
-            <a class="header-contacts-link hover-focus-i" href="tel:+380950370108">+38 095 037 01 08</a>
+          <li class="item contacts-item">
+            <a class="link" href="tel:+380950370108">
+              +38 095 037 01 08</a>
           </li>
         </ul>
       </div>
@@ -66,125 +66,140 @@
 
     <section class="hero">
       <div class="container">
-        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <!-- BUTTON -->
-        <button class="btn-hero" type="button">Замовити послугу</button>
+        <div class="hero-group">
+          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+          <!-- BUTTON -->
+          <button class="btn-hero" type="button">Замовити послугу</button>
+        </div>
       </div>
     </section>
 
     <!-- Секция описания качеств Студии-->
-    <section class="qualites padd-top-botm">
+    <section class="qualites">
       <div class="container">
-        <!-- Заголовок отсутствующий в макете, позже будет скрыт в Стилях,
-         он для Асистивных технологий  и Search Engine Optimisation -->
-        <!-- <h2>Качества Студии</h2> -->
+        <h2 class="visually-hidden">Качества Студии</h2>
+
         <ul class="list qualites-list">
-          <li class="qualites-list-item">
-            <h3 class="qualites-list-item-title">Увага до деталей</h3>
-            <p class="qualites-list-item-text">
+
+          <li class="item qualites-item">
+            <div class="icon">
+
+            </div>
+            <h3 class="qualites-item-title">Увага до деталей</h3>
+            <p class="qualites-item-paragraf">
               Ідейні міркування, і навіть початок повсякденної роботи з
               формування позиції.
             </p>
           </li>
 
-          <li class="qualites-list-item">
-            <h3 class="qualites-list-item-title">Пунктуальність</h3>
-            <p class="qualites-list-item-text">
+          <li class="item qualites-item">
+            <div class="icon">
+
+            </div>
+            <h3 class="qualites-item-title">Пунктуальність</h3>
+            <p class="qualites-item-paragraf">
               Завдання організації, особливо рамки і місце навчання кадрів
               тягне у себе.
             </p>
           </li>
 
-          <li class="qualites-list-item">
-            <h3 class="qualites-list-item-title">Планування</h3>
-            <p class="qualites-list-item-text">
+          <li class="item qualites-item">
+            <div class="icon">
+
+            </div>
+            <h3 class="qualites-item-title">Планування</h3>
+            <p class="qualites-item-paragraf">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
 
-          <li class="qualites-list-item">
-            <h3 class="qualites-list-item-title">Сучасні технології</h3>
-            <p class="qualites-list-item-text">
+          <li class="item qualites-item">
+            <div class="icon">
+
+            </div>
+            <h3 class="qualites-item-title">Сучасні технології</h3>
+            <p class="qualites-item-paragraf">
               Значимість цих проблем настільки очевидна, що реалізація
               планових завдань.
             </p>
           </li>
         </ul>
       </div>
+
     </section>
 
     <!-- Секция описания видов деятельность Студии-->
     <section class="features">
       <div class="container">
-        <h2 class="features-title title-style">Чим ми займаємося</h2>
+        <h2 class="features-title">Чим ми займаємося</h2>
         <!-- Блок оборачивания div  для стилизации в будущем -->
         <ul class="list features-list">
-          <li class="features-list-item">
+          <li class="item features-item">
             <img src="./images/img_1_370x294.jpg"
-              alt="ПК, планшет, клавіатура, блокнот, миша, монітор, карандаш, окуляри" width="370" height="294" />
+              alt="ПК, планшет, клавіатура, блокнот, миша, монітор, карандаш, окуляри" width="370">
           </li>
-          <li class="features-list-item">
+          <li class="item features-item">
             <img src="./images/img_2_370x294.jpg"
-              alt="Смартфон, ноутбук, монітор, шаблони візуального вигляду застосунків" width="370" height="294" />
+              alt="Смартфон, ноутбук, монітор, шаблони візуального вигляду застосунків" width="370">
           </li>
-          <li class="features-list-item">
-            <img src="./images/img_3_370x294.jpg" alt="планшет, палітра кольорів, клавіатура, миша, мак про" width="370"
-              height="294" />
+          <li class="item features-item">
+            <img src="./images/img_3_370x294.jpg" alt="планшет, палітра кольорів, клавіатура, миша, мак про"
+              width="370">
           </li>
         </ul>
       </div>
     </section>
 
     <!-- Секция описания членов команды Студии-->
-    <section class="team padd-top-botm">
+    <section class="team">
       <div class="container">
-        <h2 class="team-title title-style">Наша команда</h2>
+        <h2 class="team-title">Наша команда</h2>
         <ul class="list team-list">
-          <li class="team-list-item">
-            <div class="team-list-item-card">
+          <li class="item team-item">
+            <div class="card team-card">
               <img src="./images/photo_1_270x260.jpg" alt="Ігор Дем'яненко. Айті спеціаліст з розробки продуктів"
                 title="Ігор Дем'яненко. Айті спеціаліст з розробки продуктів" width="270" height="" />
               <div class="team-card-text">
-                <h3 class="team-list-item-title">Ігор Дем'яненко</h3>
-                <p class="team-list-item-text">Product Designer</p>
+                <h3 class="team-card-title">Ігор Дем'яненко</h3>
+                <p class="team-card-paragraf">Product Designer</p>
               </div>
             </div>
           </li>
 
-          <li class="team-list-item">
-            <div class="team-item-card">
+          <li class="item team-item">
+            <div class="card team-card">
               <img src="./images/photo_2_270x260.jpg"
                 alt="Ольга Рєпіна. Айті спеціалістка з розробки зовнішних інтерфейсів"
                 title="Ольга Рєпіна. Айті спеціалістка з розробки зовнішних інтерфейсів" width="270" height="260" />
               <div class="team-card-text">
-                <h3 class="team-list-item-title">Ольга Рєпіна</h3>
-                <p class="team-list-item-text">Frontend Developer</p>
+                <h3 class="team-card-title">Ольга Рєпіна</h3>
+                <p class="team-card-paragraf">Frontend Developer</p>
               </div>
             </div>
           </li>
 
-          <li class="team-list-item">
-            <div class="team-item-card">
+          <li class="item team-item">
+            <div class="card team-card">
               <img src="./images/photo_3_270x260.jpg"
                 alt="Микола Тарасов. Айті спеціаліст з розробки торгівельних стратегій та продажів"
                 title="Микола Тарасов. Айті спеціаліст з розробки торгівельних стратегій та продажів" width="270"
                 height="260" />
               <div class="team-card-text">
-                <h3 class="team-list-item-title">Микола Тарасов</h3>
-                <p class="team-list-item-text">Marketing</p>
+                <h3 class="team-card-title">Микола Тарасов</h3>
+                <p class="team-card-paragraf">Marketing</p>
               </div>
             </div>
           </li>
 
-          <li class="team-list-item">
-            <div class="team-item-card">
+          <li class="item team-item">
+            <div class="card team-card">
               <img src="./images/photo_4_270x260.jpg"
                 alt="Михайло Єрмаков. Айті спеціаліст з розробки інтерфейсів для користувачів"
                 title="Михайло Єрмаков. Айті спеціаліст з розробки зовнішних інтерфейсів для користувачів" width="270"
                 height="260" />
               <div class="team-card-text">
-                <h3 class="team-list-item-title">Михайло Єрмаков</h3>
-                <p class="team-list-item-text">UI Designer</p>
+                <h3 class="team-card-title">Михайло Єрмаков</h3>
+                <p class="team-card-paragraf">UI Designer</p>
               </div>
             </div>
           </li>
@@ -192,32 +207,74 @@
       </div>
     </section>
 
+    <section class="clients">
+      <div class="container">
+        <h2 class="clients-title">Наші клієнти</h2>
+        <ul class="list clients-list">
+          <li class="item clients-item">1</li>
+          <li class="item clients-item">2</li>
+          <li class="item clients-item">3</li>
+          <li class="item clients-item">4</li>
+          <li class="item clients-item">5</li>
+          <li class="item clients-item">6</li>
+        </ul>
+      </div>
+
+    </section>
+
+
   </main>
 
   <!-- Подвал страницы -->
   <footer class="footer">
     <div class="container">
-      <!-- Текст-Лого WebStudio -->
-      <a class="footer-logo" href="./index.html"><span class="blue-web">Web</span>Studio</a>
+      <div class="footer-group">
+        <!-- Текст-Лого WebStudio -->
+        <address class="address">
+          <a class="footer-logo" href="./index.html"><span class="blue-web">Web</span>Studio</a>
+          <ul class="list contacts">
+            <li class="item contacts-item">
+              <!-- Адрес физический  Студии -->
+              <a class="link contacts-item-coord" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                rel="nofollow noreferrer noopener">м. Київ, пр-т Лесі Українки, 26</a>
+            </li>
+            <li class="item contacts-item">
+              <!-- Почта электронная  Студии -->
+              <a class="link contacts-item-mailto" href="mailto:alexanderksua@gmail.com">alexanderksua@gmail.com</a>
+            </li>
+            <li class="item contacts-item">
+              <!-- Телефон мобильный Студии -->
+              <a class="link contacts-item-tel" href="tel:+380950370108">+38 095 037 01 08</a>
+            </li>
+          </ul>
+        </address>
 
-      <address class="address">
-        <ul class="list contacts">
-          <li class="contacts-item">
-            <!-- Адрес физический  Студии -->
-            <a class="hover-focus-i contacts-item-coord" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-              rel="nofollow noreferrer noopener">м. Київ, пр-т Лесі Українки, 26</a>
-          </li>
-          <li class="contacts-item">
-            <!-- Почта электронная  Студии -->
-            <a class="hover-focus-i contacts-item-mailto"
-              href="mailto:alexanderksua@gmail.com">alexanderksua@gmail.com</a>
-          </li>
-          <li class="contacts-item">
-            <!-- Телефон мобильный Студии -->
-            <a class="hover-focus-i contacts-item-tel" href="tel:+380950370108">+38 095 037 01 08</a>
-          </li>
-        </ul>
-      </address>
+        <div class="social">
+          <h3 class="social-title">приєднуйтесь</h3>
+          <ul class="list social-list">
+            <li class="item social-item">
+              <a class="link social-link" href="" rel="nofollow noreferrer noopener">
+                1
+              </a>
+            </li>
+            <li class="item social-item">
+              <a class="link social-link" href="" rel="nofollow noreferrer noopener">
+                2
+              </a>
+            </li>
+            <li class="item social-item">
+              <a class="link social-link" href="" rel="nofollow noreferrer noopener">
+                3
+              </a>
+            </li>
+            <li class="item social-item">
+              <a class="link social-link" href="" rel="noopener nofollow noreferrer">
+                4
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 

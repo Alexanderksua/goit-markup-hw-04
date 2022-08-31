@@ -20,41 +20,40 @@
 </head>
 
 <body>
-
   <!-- Голова-Шапка сайты -->
   <header class="header">
     <div class="container">
       <!-- Блок оформления фона header -->
+
       <div class="header-group">
         <!-- Панель навигации из двух частей -->
-
         <!-- Панель навигации #1 - Логотип, Студія, Портфоліо -->
         <!-- Логотип, WebStudio -->
         <a class="header-logo" href="./index.html"><span class="blue-web">Web</span>Studio</a>
-
         <nav class="nav-group">
           <!-- Список ссылок на страницы -->
           <ul class="list pages">
-            <li class="pages-item">
-              <a class="pages-item-link hover-focus-i" href="./index.html">Студія</a>
+            <li class="item pages-item">
+              <a class="link curent" href="./index.html">Студія</a>
             </li>
-            <li class="pages-item">
-              <a class="pages-item-link hover-focus-i curent" href="./portfolio.html">Портфоліо</a>
+            <li class="item pages-item curent">
+              <a class="link" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="pages-item">
-              <a class="pages-item-link hover-focus-i" href="./contacts.html">Контакти</a>
+            <li class="item pages-item">
+              <a class="link" href="./contacts.html">Контакти</a>
             </li>
           </ul>
         </nav>
 
         <!-- Панель навигации #2 - Контакти: e-mail, tel -->
-        <ul class="list header-contacts">
-          <li class="header-contacts-item">
-            <a class="header-contacts-link hover-focus-i"
-              href="mailto:alexanderksua@gmail.com">alexanderksua@gmail.com</a>
+        <ul class="list contacts">
+          <li class="item contacts-item">
+            <a class="link" href="mailto:alexanderksua@gmail.com">
+              alexanderksua@gmail.com</a>
           </li>
-          <li class="header-contacts-item">
-            <a class="header-contacts-link hover-focus-i" href="tel:+380950370108">+38 095 037 01 08</a>
+          <li class="item contacts-item">
+            <a class="link" href="tel:+380950370108">
+              +38 095 037 01 08</a>
           </li>
         </ul>
       </div>
@@ -68,11 +67,11 @@
         <h1 class="visually-hidden">Портфоліо</h1>
 
         <ul class="list buttons">
-          <li class="buttons-item"><button type="button" class="btn hover-focus-p all">Усі</button></li>
-          <li class="buttons-item"><button type="button" class="btn hover-focus-p websites">Веб-сайти</button></li>
-          <li class="buttons-item"><button type="button" class="btn hover-focus-p apps">Додатки</button></li>
-          <li class="buttons-item"><button type="button" class="btn hover-focus-p design">Дизайн</button></li>
-          <li class="buttons-item"><button type="button" class="btn hover-focus-p marketing">Маркетинг</button></li>
+          <li class="buttons-item"><button type="button" class="btn all">Усі</button></li>
+          <li class="buttons-item"><button type="button" class="btn websites">Веб-сайти</button></li>
+          <li class="buttons-item"><button type="button" class="btn apps">Додатки</button></li>
+          <li class="buttons-item"><button type="button" class="btn design">Дизайн</button></li>
+          <li class="buttons-item"><button type="button" class="btn marketing">Маркетинг</button></li>
         </ul>
 
         <ul class="list cards">
@@ -167,26 +166,53 @@
   <!-- Подвал страницы -->
   <footer class="footer">
     <div class="container">
-      <!-- Текст-Лого WebStudio -->
-      <a class="footer-logo" href="./index.html"><span class="blue-web">Web</span>Studio</a>
+      <div class="footer-group">
+        <!-- Текст-Лого WebStudio -->
+        <address class="address">
+          <a class="footer-logo" href="./index.html"><span class="blue-web">Web</span>Studio</a>
+          <ul class="list contacts">
+            <li class="item contacts-item">
+              <!-- Адрес физический  Студии -->
+              <a class="link contacts-item-coord" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                rel="nofollow noreferrer noopener">м. Київ, пр-т Лесі Українки, 26</a>
+            </li>
+            <li class="item contacts-item">
+              <!-- Почта электронная  Студии -->
+              <a class="link contacts-item-mailto" href="mailto:alexanderksua@gmail.com">alexanderksua@gmail.com</a>
+            </li>
+            <li class="item contacts-item">
+              <!-- Телефон мобильный Студии -->
+              <a class="link contacts-item-tel" href="tel:+380950370108">+38 095 037 01 08</a>
+            </li>
+          </ul>
+        </address>
 
-      <address class="address">
-        <ul class="list contacts">
-          <li class="contacts-item">
-            <!-- Адрес физический  Студии -->
-            <a class="hover-focus-i contacts-item-coord" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-              rel="nofollow noreferrer noopener">м. Київ, пр-т Лесі Українки, 26</a>
-          </li>
-          <li class="contacts-item">
-            <!-- Почта электронная  Студии -->
-            <a class="hover-focus-i contacts-item-mailto" href="mailto:info@devstudio.com">info@devstudio.com</a>
-          </li>
-          <li class="contacts-item">
-            <!-- Телефон мобильный Студии -->
-            <a class="hover-focus-i contacts-item-tel" href="tel:+380961111111">+38 096 111 11 11</a>
-          </li>
-        </ul>
-      </address>
+        <div class="social">
+          <h3 class="social-title">приєднуйтесь</h3>
+          <ul class="list social-list">
+            <li class="item social-item">
+              <a class="link social-link" href="" rel="nofollow noreferrer noopener">
+                1
+              </a>
+            </li>
+            <li class="item social-item">
+              <a class="link social-link" href="" rel="nofollow noreferrer noopener">
+                2
+              </a>
+            </li>
+            <li class="item social-item">
+              <a class="link social-link" href="" rel="nofollow noreferrer noopener">
+                3
+              </a>
+            </li>
+            <li class="item social-item">
+              <a class="link social-link" href="" rel="noopener nofollow noreferrer">
+                4
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 
