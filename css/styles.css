@@ -181,7 +181,7 @@ ul>li>.link:focus,
 .hero {
       background: rgb(47, 48, 58);
       background-image: linear-gradient(90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%);
-      background-image: url('/images/bg-img.png');
+      background-image: url('/images/bg-Img.png');
       background-repeat: no-repeat;
       background-position: center;
 }
