@@ -42,13 +42,21 @@ ul {
       --ligth-gray-bkgr-team: #F5F4FA;
       --hero-bg: #C4C4C4;
       --hero-bg-overlay: rgba(47, 48, 58, 0.4);
+      --clients-icons-light-gray: #AFB1B8;
 }
 
 
 body {
-      background-color: var(--ligth-gray-bkgr-team);
+      background-color: var(--white-bkgr);
       color: var(--dark-gray);
       font-family: 'Roboto', 'Sans Serif';
+}
+
+.qualites,
+.features,
+.clients,
+.main-portfolio {
+      background-color: var(--light-white);
 }
 
 /* Отключаем настройки ссылок по умолчанию*/
@@ -88,11 +96,29 @@ body {
       border-bottom: 1px solid var(--white-br-bottom);
 }
 
+.contacts-icon {
+      fill: var(--light-gray);
+}
+
+
 .header-group,
 .header-group .contacts,
 .pages {
       display: flex;
       align-items: center;
+}
+
+.header-group .contacts .contacts-item .link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+
+.header-group .contacts .contacts-item:hover .contacts-icon,
+.contacts-icon:hover,
+.header-group .contacts .contacts-item:focus .contacts-icon,
+.contacts-icon:focus {
+      fill: var(--blue);
 }
 
 .header-logo,
@@ -147,8 +173,8 @@ ul>li>.link:hover,
 ul>li>.link:focus,
 .curent {
       color: var(--blue);
-}
 
+}
 
 /* STUDIO main */
 /* HERO */
@@ -206,12 +232,22 @@ ul>li>.link:focus,
 .qualites {
       padding-top: 94px;
       padding-bottom: 94px;
-      background: var(--white-bkgr);
 }
 
-.container .qualites-list>.qualites-item {
-      width: calc(100% - ((3 * 30px) / 4));
+.qualites-icon {
+      display: block;
+}
+
+.qualites-item-icon {
+      display: flex;
+      width: 270px;
       height: 120px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      background: var(--ligth-gray-bkgr-team);
+
+      border-radius: 4px;
 }
 
 .qualites-list {
@@ -293,8 +329,8 @@ ul>li>.link:focus,
 }
 
 .team-card-text {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding: 30px 10px;
+
 }
 
 .team-list .team-item {
@@ -335,13 +371,120 @@ ul>li>.link:focus,
       padding-bottom: 94px;
 }
 
-.clients-list>.item {
-      display: inline-block;
+.clients-item {
+      border: 1px solid var(--clients-icons-light-gray);
+      border-radius: 4px;
+      padding: 15px 31px;
+}
+
+.clients-list {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+}
+
+.clients-icons {
+      display: flex;
+      fill: var(--clients-icons-light-gray);
+}
+
+.clients-item:hover .clients-icons,
+.clients-item:focus .clients-icons,
+.clients-list>.clients-item:hover,
+.clients-list>.clients-item:focus {
+      border-color: var(--blue);
+      fill: var(--blue);
+      cursor: pointer;
 }
 
 /* PORTFOLIO main */
-/* FILTERS BUTTONSET /*
+.main-portfolio {
+      padding-top: 94px;
+      padding-bottom: 94px;
+}
+
+/* FILTERS BUTTON-SET */
+
+.list.buttons {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 34px;
+}
+
+.btn {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: calc(26 /16);
+
+      text-align: center;
+      letter-spacing: 0.03em;
+
+      color: var(--dark-gray);
+      padding: 6px 22px;
+      border: none;
+      background-color: var(--ligth-gray-bkgr-team);
+      border-radius: 4px;
+}
+
+.btn:hover,
+.btn:focus {
+      background: var(--blue);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      cursor: pointer;
+}
+
 /* WORKS */
+
+.container>.list.cards>.cards-item>div {
+      width: calc((100% - (2*30px)/3));
+}
+
+.list.cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+}
+
+.cards-item {
+      background: var(--light-white);
+      border-bottom: 1px solid var(--white-card-p);
+}
+
+.list.cards .cards-item:hover,
+.list.cards .cards-item:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+      0px 4px 4px rgba(0, 0, 0, 0.06), 
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.cards-item img {
+      display: block;
+}
+
+.cards-item .card-text-content {
+      padding: 20px 24px;
+}
+
+.cards-item-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: calc(36 / 18);
+      letter-spacing: 0.06em;
+
+      color: var(--dark-gray);
+      margin-bottom: 4px;
+}
+
+.cards-item-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: calc(30 / 16);
+      letter-spacing: 0.03em;
+
+      color: var(--light-gray);
+}
 
 /* FOOTER */
 .footer {
@@ -391,15 +534,16 @@ ul>li>.link:focus,
       margin-bottom: 9px;
 }
 
-/* SOCIALS*/
+/* TEAM-SOCIALS */
 .social {
       display: block;
-      padding-top: 12px;
 }
 
 .social-list {
       display: flex;
-      border: 1px dashed magenta;
+      gap: 10px;
+      justify-content: center;
+      color: var(--light-gray);
 }
 
 .social-title {
@@ -408,12 +552,74 @@ ul>li>.link:focus,
       line-height: calc(16/14);
       letter-spacing: 0.03em;
       text-transform: uppercase;
-      color: var(--light-white);
-      margin-bottom: 20px;
-
+      margin-bottom: 16px;
 }
 
+.social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      color: var(--light-gray);
+}
 
+.social-icon {
+      fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+      background-color: var(--blue);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+      color: var(--light-white);
+}
+
+/* FOOTER-SOCIALS */
+.footer-social {
+      display: block;
+      padding-top: 12px;
+      color: var(--light-white);
+}
+
+.footer-social-list {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+}
+
+.footer-social-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: calc(16/14);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+}
+
+.footer-social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+      background-color: var(--blue);
+      fill: var(--light-white);
+}
+
+.footer-social-icon {
+      fill: var(--light-white);
+}
 
 /* 
 Проект 
@@ -434,20 +640,21 @@ ul>li>.link:focus,
 ++«B1» Для всех иконок используется векторная графика в формате svg. 
 ++«B2» SVG-иконки экспортированы правильно. При экспорте выбрана «группа»,
   а не сам вектор. 
---«B3» Все иконки из SVG-спрайта добавлены в HTML при помощи тегов <svg>и <use>
---«B4» Размеры иконок взяты из макета и заданы элементу <svg>в HTML-файле. 
---«B5» В блоке Контактов в шапке, добавлены иконки конверта и телефона. 
---«B6» В секции Преимуществ добавлены иконки. 
---«B7» В секции Команды добавлены иконки соцсетей. 
---«B8» В секции Клиентов добавлены иконки компаний. 
---«B9» В футере добавлены иконки соцсетей. 
+++«B3» Все иконки из SVG-спрайта добавлены в HTML при помощи тегов <svg>и <use>
+++«B4» Размеры иконок взяты из макета и заданы элементу <svg>в HTML-файле. 
+++«B5» В блоке Контактов в шапке, добавлены иконки конверта и телефона. 
+-+«B6» В секции Преимуществ добавлены иконки. 
+++«B7» В секции Команды добавлены иконки соцсетей. 
+-+«B8» В секции Клиентов добавлены иконки компаний. 
+++«B9» В футере добавлены иконки соцсетей. 
 
 Оформление 
---«C1» Большое изображение с эффектом затемнения (под хедером) выполнено как фон. 
---Для затемнения используется многослойный фон с градиентом. 
---«C2» Фоновое изображение в блоке под хедером не растягивается шире своего 
+++«C1» Большое изображение с эффектом затемнения (под хедером) выполнено как фон. 
+++Для затемнения используется многослойный фон с градиентом. 
+++«C2» Фоновое изображение в блоке под хедером не растягивается шире своего 
   оригинального размера 1600рх. 
---«C3» В карточках секции Наша команда есть постоянный эффект тени. 
+++«C3» В карточках секции Наша команда есть постоянный эффект тени. 
+
 --«C4» В карточках страницы Портфолио есть эффект тени при ховере в любом месте 
   карточки. 
 --«C5» В фильтре (список кнопок) страницы Портфолио есть эффект тени при ховере 
