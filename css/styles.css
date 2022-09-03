@@ -184,7 +184,7 @@ ul>li>.link:focus,
             url('../images/bg-Img.png');
       background-repeat: no-repeat;
       background-position: center;
-      width: 1200px;
+      width: 1600px;
       height: 600px;
       margin: 0 auto;
       background-size: cover;
@@ -468,10 +468,12 @@ ul>li>.link:focus,
       background: var(--light-white);
       border-bottom: 1px solid var(--white-card-p);
 }
-
+.cards-item-link{
+            display: block;
+}
 .cards-item-link:hover,
 .cards-item-link:focus {
-      display: block;
+
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
